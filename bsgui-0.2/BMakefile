@@ -1,0 +1,21 @@
+#
+# BSGUI BMakefile
+#
+
+.LANGUAGE C++
+.OUTPUT bsguidemo
+.CFLAGS -Wall -Iinclude -g3
+.LDFLAGS -Llib
+
+.EXEC bmake *CC=$(CC) *AR=$(AR) --file BMakefile.lib --makefile Makefile.lib
+
+.PREFIX demo/
+.CFILES demo
+
+.FOR LINUX
+.LIBS SDL GL GLU bsgui
+
+
+.FOR WIN32
+.LIBS bsgui SDL opengl32 glu32 stdc++ bsgui
+.OUTPUT bsguidemo.exe

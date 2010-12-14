@@ -1,0 +1,18 @@
+#
+# BSGUI BMakefile
+#
+
+.LANGUAGE C++
+.TYPE LIB
+.OUTPUT lib/libbsgui.a
+#.CFLAGS -Wall -Iinclude -O3 -I../../Undead/include
+.CFLAGS -Wall -Iinclude -O3
+.LDFLAGS -O
+
+.ANJUTAPRJ bsgui.prj
+
+.FOR LINUX
+.LIBS SDL GL GLU 
+
+.FOR WIN32
+.LIBS SDL opengl32 glu32

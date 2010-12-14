@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="include\bsgui\bsgui.h" open="1" top="0" tabpos="2">
+		<Cursor position="312" topLine="6" />
+	</File>
+	<File name="include\bsgui\draw.h" open="1" top="0" tabpos="6">
+		<Cursor position="735" topLine="23" />
+	</File>
+	<File name="src\actions.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="38" topLine="0" />
+	</File>
+	<File name="src\bsguiapp.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="946" topLine="25" />
+	</File>
+	<File name="src\draw.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="2285" topLine="202" />
+	</File>
+	<File name="src\images.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="235" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

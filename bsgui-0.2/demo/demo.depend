@@ -1,0 +1,255 @@
+# depslib dependency file v1.0
+1291990006 source:c:\bsgui-0.2\demo\demo.cpp
+	<bsgui/bsgui.h>
+	<math.h>
+
+1119280048 c:\bsgui-0.2\include\bsgui\bsgui.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL/SDL.h>
+	<bsmemtrack/memory.h>
+	<bsgui/actions.h>
+	<bsgui/dataman.h>
+	<bsgui/controls.h>
+	<bsgui/screen.h>
+	<bsgui/images.h>
+	<bsgui/windows.h>
+	<bsgui/labels.h>
+	<bsgui/buttons.h>
+	<bsgui/checkboxes.h>
+	<bsgui/sliders.h>
+	<bsgui/scrollboxes.h>
+	<bsgui/listboxes.h>
+	<bsgui/inputboxes.h>
+	<bsgui/filebrowser.h>
+	<bsgui/renderers.h>
+	<bsgui/modelviews.h>
+	<bsgui/messageboxes.h>
+	<bsgui/menus.h>
+	<bsgui/progressbars.h>
+	<bsgui/draw.h>
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1255800464 c:\sdl-1.2.14\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_platform.h
+
+1255800450 c:\sdl-1.2.14\include\sdl\begin_code.h
+
+1255800450 c:\sdl-1.2.14\include\sdl\close_code.h
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_keysym.h
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl-1.2.14\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1119219644 c:\bsgui-0.2\include\bsgui\actions.h
+
+1119219782 c:\bsgui-0.2\include\bsgui\dataman.h
+
+1119203954 c:\bsgui-0.2\include\bsgui\controls.h
+
+1119022698 c:\bsgui-0.2\include\bsgui\screen.h
+
+1119239972 c:\bsgui-0.2\include\bsgui\images.h
+
+1119241034 c:\bsgui-0.2\include\bsgui\windows.h
+
+1118581138 c:\bsgui-0.2\include\bsgui\labels.h
+
+1119276736 c:\bsgui-0.2\include\bsgui\buttons.h
+
+1119215020 c:\bsgui-0.2\include\bsgui\checkboxes.h
+
+1119215038 c:\bsgui-0.2\include\bsgui\sliders.h
+
+1118581138 c:\bsgui-0.2\include\bsgui\scrollboxes.h
+
+1119203046 c:\bsgui-0.2\include\bsgui\listboxes.h
+
+1119215058 c:\bsgui-0.2\include\bsgui\inputboxes.h
+
+1119208488 c:\bsgui-0.2\include\bsgui\filebrowser.h
+
+1118581138 c:\bsgui-0.2\include\bsgui\renderers.h
+
+1118581138 c:\bsgui-0.2\include\bsgui\modelviews.h
+
+1119038550 c:\bsgui-0.2\include\bsgui\messageboxes.h
+
+1119203056 c:\bsgui-0.2\include\bsgui\menus.h
+
+1119275308 c:\bsgui-0.2\include\bsgui\progressbars.h
+
+1119039800 c:\bsgui-0.2\include\bsgui\draw.h
+
