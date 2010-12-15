@@ -15,7 +15,8 @@ extern "C"
 #include <GL/glu.h>
 
 #include "bsgui/bsgui.h"
-#undef main
+
+#include "version.h"
 
 bool	running = true;
 Window	*win;
@@ -136,7 +137,7 @@ int InitVideo()
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
 	SDL_ShowCursor(false);
-    SDL_WM_SetCaption("Grapher 0.1.0", "Grapher");
+    SDL_WM_SetCaption(APPLICATION_NAME " " VERSION, "Grapher");
 
   if (SDL_SetVideoMode(width, height, 0, SDL_OPENGL) == 0)
   {
@@ -273,6 +274,8 @@ void Display()
 
 	glScalef(zoom, zoom, 1);
 
+	float y;
+
 	for (int i = 0; i < functions.size(); i++)
 	{
 		glColor3f(i%2, (i+1)%2, (i+2)%3);
@@ -282,7 +285,16 @@ void Display()
 			lua_getfield(L, LUA_GLOBALSINDEX, functions[i].c_str());
 			lua_pushnumber(L, x);
 			lua_pcall(L, 1, 1, 0);
-			float y = lua_tonumber(L, -1);
+			float ny;
+			ny = lua_tonumber(L, -1);
+			float maxY = (height/2 - yOffset)/zoom;
+			float minY = (-height/2 - yOffset)/zoom;
+			if ((ny>maxY && y<minY) || (y>maxY && ny<minY))
+			{
+				glEnd();
+				glBegin(GL_LINE_STRIP);
+			}
+			y=ny;
 			glVertex2f(x, y);
 			//printf("%.5f\n", );
 		}

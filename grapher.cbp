@@ -159,6 +159,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="version.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

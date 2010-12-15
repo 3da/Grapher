@@ -1,0 +1,7 @@
+#ifndef VERSION_H_INCLUDED
+#define VERSION_H_INCLUDED
+
+#define VERSION "0.5.1"
+#define APPLICATION_NAME "Grapher"
+
+#endif // VERSION_H_INCLUDED

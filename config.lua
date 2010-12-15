@@ -1,5 +1,5 @@
 function parabola(x)
-	return math.sin(x)*10
+	return math.tan(x)
 end
 
 function lol(x)
