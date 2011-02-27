@@ -1,10 +1,10 @@
 function parabola(x)
-	return math.tan(x)
+	return math.sin(x)*math.sin(x)
 end
 
 function lol(x)
-	return 2-x
+	return math.sin(x)
 end
 
 Register("parabola")
---Register("lol")
+Register("lol")

@@ -44,6 +44,8 @@
 			<Add directory="SDL-1.2.14\lib" />
 			<Add directory="bsgui-0.2\lib" />
 		</Linker>
+		<Unit filename="Application.cpp" />
+		<Unit filename="Application.h" />
 		<Unit filename="config.lua" />
 		<Unit filename="lua-5.1.4\src\lapi.c">
 			<Option compilerVar="CC" />
