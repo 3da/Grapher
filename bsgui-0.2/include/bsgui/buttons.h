@@ -5,25 +5,37 @@
 #ifndef __BSGUI_BUTTONS_H_INCLUDED__
 #define __BSGUI_BUTTONS_H_INCLUDED__
 
+#include <string>
+
+#include "bsgui/controls.h"
+
+#include "MyString.h"
+
+
+namespace BSGUI
+{
+
 struct Button : public Control
 {
-	char	*caption;
-	Bitmap	*bitmap;
-	bool	autoDeleteBitmap;
-	bool	pushed;
-	bool	highlighted;
+	MyString caption;
+	class Image *bitmap;
+	bool autoDeleteBitmap;
+	bool pushed;
+	bool highlighted;
 
-	Button(Control *parent, int x1, int y1, int x2, int y2, char *caption,
-		Bitmap *bitmap=NULL);
+	CallbackActionFunc actionPressed;
+
+	Button(Control *parent, Theme &t, int x1, int y1, int x2, int y2, const MyString caption, Image *bitmap=NULL);
 	virtual ~Button();
 
-	virtual void setCaption(char *newCaption);
-	virtual void setBitmap(Bitmap *newBitmap, bool autoDelete);
+	virtual void SetBitmap(Image *newBitmap, bool autoDelete);
 
-	virtual void render();
-	
-	virtual void onMouseDown(int x, int y, int b);
-	virtual void onMouseUp(int x, int y, int b);
+	virtual void Render();
+
+	virtual bool OnMouseDown(int x, int y, int b);
+	virtual bool OnMouseUp(int x, int y, int b);
 };
+
+}
 
 #endif

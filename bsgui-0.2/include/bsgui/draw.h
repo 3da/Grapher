@@ -9,40 +9,25 @@
 #define GL_TEXTURE_RECTANGLE_ARB	0x84F5
 #endif
 
-namespace BSGUIDraw
+namespace BSGUI
 {
-	enum FrameStyle
-	{
-		FS_NONE,
-		FS_FLAT,
-		FS_RAISED,
-		FS_LOWERED
-	};
+class Image;
+class Font;
+namespace Draw
+{
+	bool SetCursorImage(Image *image);
+	void DrawCursor(int x, int y);
+	void SetCursorAlign(unsigned long flags);
 
-	void enableOrtho();
-	void disableOrtho();
-	
-	void color(int r, int g, int b, int a=255);
-	
-	void drawRect(int x1, int y1, int x2, int y2);
-	void fillRect(int x1, int y1, int x2, int y2);
-	void drawLine(int x1, int y1, int x2, int y2);
-	void drawFrame(int x1, int y1, int x2, int y2,
- 		FrameStyle s=FS_FLAT);
- 		
-	bool loadCursorImage(char *colorFile, char *alphaFile);
-	void drawCursor(int x, int y);
+	//bool SetBaseFont(Font *font);
 
-	bool loadFontData(char *bitmapFile, char *sizeFile);
-	void drawString(int x, int y, char *str, int length=-1);
-	int stringWidth(char *str, int length=-1);
-	int stringHeight();
-	
-	void setClipArea(int x1, int y1, int x2, int y2);
-	
-	void resetClipping();
-	void openClipArea(int x1, int y1, int x2, int y2);
-	void closeClipArea();
+	void SetClipArea(int x1, int y1, int x2, int y2);
+
+	void ResetClipping();
+	void OpenClipArea(int x1, int y1, int x2, int y2);
+	void CloseClipArea();
+}
+
 }
 
 #endif

@@ -1,30 +1,29 @@
-/*
-** Bad Sector's OpenGL GUI
-*/
+#ifndef PASSWORDBOX_H_INCLUDED
+#define PASSWORDBOX_H_INCLUDED
 
-#ifndef __BSGUI_INPUTBOXES_H_INCLUDED__
-#define __BSGUI_INPUTBOXES_H_INCLUDED__
 
 #include "bsgui/controls.h"
 
 namespace BSGUI
 {
 
-struct Inputbox : public Control
+struct Passwordbox : public Control
 {
 	int tScroll;
 	int cursor;
 	int cursorX;
 
 	MyString text;
+	std::wstring password;
 
 	CallbackActionFunc actionPressed;
 
-
-	Inputbox(Control *parent, Theme &t, int x1, int y1, int x2, int y2);
-	virtual ~Inputbox();
+	Passwordbox(Control *parent, Theme &t, int x1, int y1, int x2, int y2);
+	virtual ~Passwordbox();
 
 	void SetText(const MyString text);
+	const MyString GetText();
+
 
 	virtual void Render();
 
@@ -38,4 +37,5 @@ struct Inputbox : public Control
 
 }
 
-#endif
+
+#endif // PASSWORDBOX_H_INCLUDED

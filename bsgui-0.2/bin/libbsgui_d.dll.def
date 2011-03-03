@@ -1,0 +1,436 @@
+EXPORTS
+    _ZN5BSGUI10MessageBoxERNS_5ThemeENS_8MyStringES2_b @1
+    _ZN5BSGUI11FileBrowser11GetFilenameEv @2
+    _ZN5BSGUI11FileBrowser11ReloadFilesEv @3
+    _ZN5BSGUI11FileBrowserC1ERNS_5ThemeEPNS_6ScreenENS_8MyStringES5_ @4
+    _ZN5BSGUI11FileBrowserC2ERNS_5ThemeEPNS_6ScreenENS_8MyStringES5_ @5
+    _ZN5BSGUI11FileBrowserD0Ev @6
+    _ZN5BSGUI11FileBrowserD1Ev @7
+    _ZN5BSGUI11FileBrowserD2Ev @8
+    _ZN5BSGUI11ImageOpenGL11CreateImageEP11SDL_SurfacePNS_14PixelRectangleE @9
+    _ZN5BSGUI11ImageOpenGL11LoadSurfaceEP9SDL_RWopsb @10
+    _ZN5BSGUI11ImageOpenGL11LoadSurfaceEPKc @11
+    _ZN5BSGUI11ImageOpenGL13CreateTextureERmPfP11SDL_SurfacePNS_14PixelRectangleE @12
+    _ZN5BSGUI11ImageOpenGL4DrawEmfffffPKNS_9RectangleE @13
+    _ZN5BSGUI11ImageOpenGL9LoadImageEP9SDL_RWopsb @14
+    _ZN5BSGUI11ImageOpenGL9LoadImageEPKc @15
+    _ZN5BSGUI11ImageOpenGLC1EmmmPKf @16
+    _ZN5BSGUI11ImageOpenGLC2EmmmPKf @17
+    _ZN5BSGUI11ImageOpenGLD0Ev @18
+    _ZN5BSGUI11ImageOpenGLD1Ev @19
+    _ZN5BSGUI11ImageOpenGLD2Ev @20
+    _ZN5BSGUI11ListboxItem5FocusEv @21
+    _ZN5BSGUI11ListboxItem6RenderEv @22
+    _ZN5BSGUI11ListboxItemC1EPNS_7ControlERNS_5ThemeE @23
+    _ZN5BSGUI11ListboxItemC2EPNS_7ControlERNS_5ThemeE @24
+    _ZN5BSGUI11ListboxItemD0Ev @25
+    _ZN5BSGUI11ListboxItemD1Ev @26
+    _ZN5BSGUI11ListboxItemD2Ev @27
+    _ZN5BSGUI11Passwordbox6RenderEv @28
+    _ZN5BSGUI11Passwordbox7GetTextEv @29
+    _ZN5BSGUI11Passwordbox7OnKeyUpEij @30
+    _ZN5BSGUI11Passwordbox7SetTextENS_8MyStringE @31
+    _ZN5BSGUI11Passwordbox9OnKeyDownEij @32
+    _ZN5BSGUI11PasswordboxC1EPNS_7ControlERNS_5ThemeEiiii @33
+    _ZN5BSGUI11PasswordboxC2EPNS_7ControlERNS_5ThemeEiiii @34
+    _ZN5BSGUI11PasswordboxD0Ev @35
+    _ZN5BSGUI11PasswordboxD1Ev @36
+    _ZN5BSGUI11PasswordboxD2Ev @37
+    _ZN5BSGUI11ProgressBar6RenderEv @38
+    _ZN5BSGUI11ProgressBarC1EPNS_7ControlERNS_5ThemeEiiii @39
+    _ZN5BSGUI11ProgressBarC2EPNS_7ControlERNS_5ThemeEiiii @40
+    _ZN5BSGUI11ProgressBarD0Ev @41
+    _ZN5BSGUI11ProgressBarD1Ev @42
+    _ZN5BSGUI11ProgressBarD2Ev @43
+    _ZN5BSGUI12lastRendererE @44 DATA
+    _ZN5BSGUI14HandleSDLEventEP9SDL_Event @45
+    _ZN5BSGUI28RenderOffscreenBSGUIControlsEv @46
+    _ZN5BSGUI4Draw10DrawCursorEii @47
+    _ZN5BSGUI4Draw11SetClipAreaEiiii @48
+    _ZN5BSGUI4Draw12OpenClipAreaEiiii @49
+    _ZN5BSGUI4Draw13CloseClipAreaEv @50
+    _ZN5BSGUI4Draw13ResetClippingEv @51
+    _ZN5BSGUI4Draw14SetCursorAlignEm @52
+    _ZN5BSGUI4Draw14SetCursorImageEPNS_5ImageE @53
+    _ZN5BSGUI4Font15StringRowParser10GetNextRowERPKwRmPf @54
+    _ZN5BSGUI4Font15StringRowParser5ResetEPS0_PKwffm @55
+    _ZN5BSGUI4Font15StringRowParserC1EPS0_PKwffm @56
+    _ZN5BSGUI4Font15StringRowParserC2EPS0_PKwffm @57
+    _ZN5BSGUI4Font16GetStringMetricsERfS1_PKwffm @58
+    _ZN5BSGUI4Font8DrawTextEffPKwmffm @59
+    _ZN5BSGUI4FontC2Ev @60
+    _ZN5BSGUI4FontD0Ev @61
+    _ZN5BSGUI4FontD1Ev @62
+    _ZN5BSGUI4FontD2Ev @63
+    _ZN5BSGUI4TickEv @64
+    _ZN5BSGUI5Color3SetEffff @65
+    _ZN5BSGUI5Color3UseEv @66
+    _ZN5BSGUI5ColorC1Effff @67
+    _ZN5BSGUI5ColorC1Ev @68
+    _ZN5BSGUI5Image8GetWidthEv @69
+    _ZN5BSGUI5Image9GetHeightEv @70
+    _ZN5BSGUI5ImageC2Emm @71
+    _ZN5BSGUI5ImageD0Ev @72
+    _ZN5BSGUI5ImageD1Ev @73
+    _ZN5BSGUI5ImageD2Ev @74
+    _ZN5BSGUI5Label6RenderEv @75
+    _ZN5BSGUI5Label7SetTextENS_8MyStringE @76
+    _ZN5BSGUI5Label8SetThemeERNS_5ThemeE @77
+    _ZN5BSGUI5LabelC1EPNS_7ControlERNS_5ThemeEiiNS_8MyStringE @78
+    _ZN5BSGUI5LabelC2EPNS_7ControlERNS_5ThemeEiiNS_8MyStringE @79
+    _ZN5BSGUI5LabelD0Ev @80
+    _ZN5BSGUI5LabelD1Ev @81
+    _ZN5BSGUI5LabelD2Ev @82
+    _ZN5BSGUI5Theme10DrawStringEiiNS_8MyStringEb @83
+    _ZN5BSGUI5Theme11StringWidthENS_8MyStringE @84
+    _ZN5BSGUI5Theme8DrawLineEiiii @85
+    _ZN5BSGUI5Theme8DrawRectEiiii @86
+    _ZN5BSGUI5Theme8FillRectEiiii @87
+    _ZN5BSGUI5Theme9DrawFrameEiiii @88
+    _ZN5BSGUI5ThemeC1Ev @89
+    _ZN5BSGUI5ThemeC2Ev @90
+    _ZN5BSGUI5WidenERKSs @91
+    _ZN5BSGUI6BMFont10DrawStringEffPKwmfm @92
+    _ZN5BSGUI6BMFont12HasCharacterEm @93
+    _ZN5BSGUI6BMFont13GetFontHeightEf @94
+    _ZN5BSGUI6BMFont13GetFontHeightEv @95
+    _ZN5BSGUI6BMFont14GetStringWidthEPKwfm @96
+    _ZN5BSGUI6BMFont19GetCharacterSpacingEv @97
+    _ZN5BSGUI6BMFont19SetCharacterSpacingEl @98
+    _ZN5BSGUI6BMFont4InitEv @99
+    _ZN5BSGUI6BMFont4PageC1Ev @100
+    _ZN5BSGUI6BMFont4PageC2Ev @101
+    _ZN5BSGUI6BMFont4PageD1Ev @102
+    _ZN5BSGUI6BMFont4PageD2Ev @103
+    _ZN5BSGUI6BMFont6ReloadEv @104
+    _ZN5BSGUI6BMFont8FindCharEm @105
+    _ZN5BSGUI6BMFont8FindKernEll @106
+    _ZN5BSGUI6BMFont8FindKernElll @107
+    _ZN5BSGUI6BMFont8FontData5ResetEv @108
+    _ZN5BSGUI6BMFont8FontDataC1Ev @109
+    _ZN5BSGUI6BMFont8FontDataC2Ev @110
+    _ZN5BSGUI6BMFont8FontDataD1Ev @111
+    _ZN5BSGUI6BMFont8FontDataD2Ev @112
+    _ZN5BSGUI6BMFontC1EPKc @113
+    _ZN5BSGUI6BMFontC2EPKc @114
+    _ZN5BSGUI6BMFontD0Ev @115
+    _ZN5BSGUI6BMFontD1Ev @116
+    _ZN5BSGUI6BMFontD2Ev @117
+    _ZN5BSGUI6Button11OnMouseDownEiii @118
+    _ZN5BSGUI6Button6RenderEv @119
+    _ZN5BSGUI6Button9OnMouseUpEiii @120
+    _ZN5BSGUI6Button9SetBitmapEPNS_5ImageEb @121
+    _ZN5BSGUI6ButtonC1EPNS_7ControlERNS_5ThemeEiiiiNS_8MyStringEPNS_5ImageE @122
+    _ZN5BSGUI6ButtonC2EPNS_7ControlERNS_5ThemeEiiiiNS_8MyStringEPNS_5ImageE @123
+    _ZN5BSGUI6ButtonD0Ev @124
+    _ZN5BSGUI6ButtonD1Ev @125
+    _ZN5BSGUI6ButtonD2Ev @126
+    _ZN5BSGUI6NarrowERKSbIwSt11char_traitsIwESaIwEE @127
+    _ZN5BSGUI6RenderEv @128
+    _ZN5BSGUI6Screen11OnMouseDownEiii @129
+    _ZN5BSGUI6Screen6screenE @130 DATA
+    _ZN5BSGUI6Screen8ActivateEv @131
+    _ZN5BSGUI6ScreenC1ERNS_5ThemeE @132
+    _ZN5BSGUI6ScreenC2ERNS_5ThemeE @133
+    _ZN5BSGUI6ScreenD0Ev @134
+    _ZN5BSGUI6ScreenD1Ev @135
+    _ZN5BSGUI6ScreenD2Ev @136
+    _ZN5BSGUI6Slider11OnMouseDownEiii @137
+    _ZN5BSGUI6Slider12OnMouseMovedEii @138
+    _ZN5BSGUI6Slider6RenderEv @139
+    _ZN5BSGUI6Slider9OnMouseUpEiii @140
+    _ZN5BSGUI6SliderC1EPNS_7ControlERNS_5ThemeEiiii @141
+    _ZN5BSGUI6SliderC2EPNS_7ControlERNS_5ThemeEiiii @142
+    _ZN5BSGUI6SliderD0Ev @143
+    _ZN5BSGUI6SliderD1Ev @144
+    _ZN5BSGUI6SliderD2Ev @145
+    _ZN5BSGUI6Window11OnMouseDownEiii @146
+    _ZN5BSGUI6Window12OnMouseMovedEii @147
+    _ZN5BSGUI6Window6RenderEv @148
+    _ZN5BSGUI6Window9OnMouseUpEiii @149
+    _ZN5BSGUI6Window9TranslateERiS1_ @150
+    _ZN5BSGUI6WindowC1EPNS_6ScreenERNS_5ThemeENS_8MyStringE @151
+    _ZN5BSGUI6WindowC2EPNS_6ScreenERNS_5ThemeENS_8MyStringE @152
+    _ZN5BSGUI6WindowD0Ev @153
+    _ZN5BSGUI6WindowD1Ev @154
+    _ZN5BSGUI6WindowD2Ev @155
+    _ZN5BSGUI7Control10InvalidateEv @156
+    _ZN5BSGUI7Control11OnFocusExitEv @157
+    _ZN5BSGUI7Control11OnMouseDownEiii @158
+    _ZN5BSGUI7Control11OnMouseExitEv @159
+    _ZN5BSGUI7Control11RemoveChildEPS0_ @160
+    _ZN5BSGUI7Control11RunActionOfEPS0_RPFvS1_E @161
+    _ZN5BSGUI7Control12DrawOwnFocusEv @162
+    _ZN5BSGUI7Control12DrawOwnFrameEv @163
+    _ZN5BSGUI7Control12OnFocusEnterEv @164
+    _ZN5BSGUI7Control12OnMouseEnterEv @165
+    _ZN5BSGUI7Control12OnMouseMovedEii @166
+    _ZN5BSGUI7Control12trackControlE @167 DATA
+    _ZN5BSGUI7Control13GetClientSizeERiS1_ @168
+    _ZN5BSGUI7Control13MakeExclusiveEv @169
+    _ZN5BSGUI7Control16HasKeyboardFocusEv @170
+    _ZN5BSGUI7Control16SetKeyboardFocusEv @171
+    _ZN5BSGUI7Control16SetMouseTrackingEv @172
+    _ZN5BSGUI7Control17GetBoundsChildrenERiS1_S1_S1_ @173
+    _ZN5BSGUI7Control17RemoveAllChildrenEv @174
+    _ZN5BSGUI7Control18ClearMouseTrackingEv @175
+    _ZN5BSGUI7Control19lastChildUnderMouseE @176 DATA
+    _ZN5BSGUI7Control20keyboardFocusControlE @177 DATA
+    _ZN5BSGUI7Control4MoveEii @178
+    _ZN5BSGUI7Control4TickEv @179
+    _ZN5BSGUI7Control5FocusEv @180
+    _ZN5BSGUI7Control5PlaceEiiii @181
+    _ZN5BSGUI7Control6CenterEbb @182
+    _ZN5BSGUI7Control6LayoutEv @183
+    _ZN5BSGUI7Control6RenderEv @184
+    _ZN5BSGUI7Control6ResizeEii @185
+    _ZN5BSGUI7Control7ChildAtEii @186
+    _ZN5BSGUI7Control7FocusedEv @187
+    _ZN5BSGUI7Control7OnKeyUpEij @188
+    _ZN5BSGUI7Control8AddChildEPS0_ @189
+    _ZN5BSGUI7Control8OpenClipEv @190
+    _ZN5BSGUI7Control8SetThemeERNS_5ThemeE @191
+    _ZN5BSGUI7Control9CloseClipEv @192
+    _ZN5BSGUI7Control9FindChildENS_8MyStringE @193
+    _ZN5BSGUI7Control9GetBoundsERiS1_S1_S1_ @194
+    _ZN5BSGUI7Control9GetScreenEv @195
+    _ZN5BSGUI7Control9OnKeyDownEij @196
+    _ZN5BSGUI7Control9OnMouseUpEiii @197
+    _ZN5BSGUI7Control9RunActionERPFvPS0_E @198
+    _ZN5BSGUI7Control9TranslateERiS1_ @199
+    _ZN5BSGUI7ControlC1EPS0_RNS_5ThemeE @200
+    _ZN5BSGUI7ControlC2EPS0_RNS_5ThemeE @201
+    _ZN5BSGUI7ControlD0Ev @202
+    _ZN5BSGUI7ControlD1Ev @203
+    _ZN5BSGUI7ControlD2Ev @204
+    _ZN5BSGUI7Listbox10RemoveItemEPNS_11ListboxItemE @205
+    _ZN5BSGUI7Listbox10SelectItemEPNS_11ListboxItemE @206
+    _ZN5BSGUI7Listbox10SelectItemEj @207
+    _ZN5BSGUI7Listbox13GetClientSizeERiS1_ @208
+    _ZN5BSGUI7Listbox5ClearEv @209
+    _ZN5BSGUI7Listbox6LayoutEv @210
+    _ZN5BSGUI7Listbox7AddItemENS_8MyStringE @211
+    _ZN5BSGUI7Listbox7AddItemEPNS_11ListboxItemE @212
+    _ZN5BSGUI7Listbox7GetItemEj @213
+    _ZN5BSGUI7Listbox8FindItemENS_8MyStringE @214
+    _ZN5BSGUI7ListboxC1EPNS_7ControlERNS_5ThemeEiiii @215
+    _ZN5BSGUI7ListboxC2EPNS_7ControlERNS_5ThemeEiiii @216
+    _ZN5BSGUI7ListboxD0Ev @217
+    _ZN5BSGUI7ListboxD1Ev @218
+    _ZN5BSGUI7ListboxD2Ev @219
+    _ZN5BSGUI7Picture5PlaceEiiii @220
+    _ZN5BSGUI7Picture6RenderEv @221
+    _ZN5BSGUI7Picture8SetImageEPNS_5ImageE @222
+    _ZN5BSGUI7PictureC1EPNS_7ControlERNS_5ThemeEiiiiPNS_5ImageE @223
+    _ZN5BSGUI7PictureC2EPNS_7ControlERNS_5ThemeEiiiiPNS_5ImageE @224
+    _ZN5BSGUI7PictureD0Ev @225
+    _ZN5BSGUI7PictureD1Ev @226
+    _ZN5BSGUI7PictureD2Ev @227
+    _ZN5BSGUI8Checkbox11OnMouseDownEiii @228
+    _ZN5BSGUI8Checkbox11OnMouseExitEv @229
+    _ZN5BSGUI8Checkbox12OnMouseEnterEv @230
+    _ZN5BSGUI8Checkbox6RenderEv @231
+    _ZN5BSGUI8Checkbox9OnMouseUpEiii @232
+    _ZN5BSGUI8CheckboxC1EPNS_7ControlERNS_5ThemeEiiiiNS_8MyStringE @233
+    _ZN5BSGUI8CheckboxC2EPNS_7ControlERNS_5ThemeEiiiiNS_8MyStringE @234
+    _ZN5BSGUI8CheckboxD0Ev @235
+    _ZN5BSGUI8CheckboxD1Ev @236
+    _ZN5BSGUI8CheckboxD2Ev @237
+    _ZN5BSGUI8Inputbox6RenderEv @238
+    _ZN5BSGUI8Inputbox7OnKeyUpEij @239
+    _ZN5BSGUI8Inputbox7SetTextENS_8MyStringE @240
+    _ZN5BSGUI8Inputbox9OnKeyDownEij @241
+    _ZN5BSGUI8InputboxC1EPNS_7ControlERNS_5ThemeEiiii @242
+    _ZN5BSGUI8InputboxC2EPNS_7ControlERNS_5ThemeEiiii @243
+    _ZN5BSGUI8InputboxD0Ev @244
+    _ZN5BSGUI8InputboxD1Ev @245
+    _ZN5BSGUI8InputboxD2Ev @246
+    _ZN5BSGUI8MyString3SetERKSbIwSt11char_traitsIwESaIwEE @247
+    _ZN5BSGUI8MyString3SetERKSs @248
+    _ZN5BSGUI8MyString8GetAsciiEv @249
+    _ZN5BSGUI8MyStringC1EPKc @250
+    _ZN5BSGUI8MyStringC1EPKw @251
+    _ZN5BSGUI8MyStringC1ERKS0_ @252
+    _ZN5BSGUI8MyStringC1Ev @253
+    _ZN5BSGUI8MyStringC2EPKc @254
+    _ZN5BSGUI8MyStringC2EPKw @255
+    _ZN5BSGUI8MyStringD1Ev @256
+    _ZN5BSGUI8MyStringaSERKS0_ @257
+    _ZN5BSGUI8Renderer15OffscreenRenderEv @258
+    _ZN5BSGUI8Renderer19DrawOffscreenRenderEv @259
+    _ZN5BSGUI8Renderer5PlaceEiiii @260
+    _ZN5BSGUI8RendererC1EPNS_7ControlERNS_5ThemeE @261
+    _ZN5BSGUI8RendererC2EPNS_7ControlERNS_5ThemeE @262
+    _ZN5BSGUI8RendererD0Ev @263
+    _ZN5BSGUI8RendererD1Ev @264
+    _ZN5BSGUI8RendererD2Ev @265
+    _ZN5BSGUI8RendererE @266 DATA
+    _ZN5BSGUI9ModelView15OffscreenRenderEv @267
+    _ZN5BSGUI9ModelView6RenderEv @268
+    _ZN5BSGUI9ModelViewC1EPNS_7ControlERNS_5ThemeEiiii @269
+    _ZN5BSGUI9ModelViewC2EPNS_7ControlERNS_5ThemeEiiii @270
+    _ZN5BSGUI9ModelViewD0Ev @271
+    _ZN5BSGUI9ModelViewD1Ev @272
+    _ZN5BSGUI9ModelViewD2Ev @273
+    _ZN5BSGUI9RectangleC1Effff @274
+    _ZN5BSGUI9Scrollbox11OnMouseDownEiii @275
+    _ZN5BSGUI9Scrollbox12OnMouseMovedEii @276
+    _ZN5BSGUI9Scrollbox17GetBoundsChildrenERiS1_S1_S1_ @277
+    _ZN5BSGUI9Scrollbox18SetScrollingBoundsEff @278
+    _ZN5BSGUI9Scrollbox5PlaceEiiii @279
+    _ZN5BSGUI9Scrollbox6LayoutEv @280
+    _ZN5BSGUI9Scrollbox6RenderEv @281
+    _ZN5BSGUI9Scrollbox8OnScrollEff @282
+    _ZN5BSGUI9Scrollbox9OnMouseUpEiii @283
+    _ZN5BSGUI9ScrollboxC1EPNS_7ControlERNS_5ThemeEiiii @284
+    _ZN5BSGUI9ScrollboxC2EPNS_7ControlERNS_5ThemeEiiii @285
+    _ZN5BSGUI9ScrollboxD0Ev @286
+    _ZN5BSGUI9ScrollboxD1Ev @287
+    _ZN5BSGUI9ScrollboxD2Ev @288
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEE10deallocateEPS3_j @289
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEE7destroyEPS3_ @290
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEE8allocateEjPKv @291
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEE9constructEPS3_RKS3_ @292
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEE9constructIIS3_EEEvPS3_DpOT_ @293
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEEC2Ev @294
+    _ZN9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEED2Ev @295
+    _ZN9__gnu_cxx17__normal_iteratorIPKPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEC1ERKS5_ @296
+    _ZN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEC1ERKS4_ @297
+    _ZN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEC1Ev @298
+    _ZN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEppEi @299
+    _ZN9__gnu_cxxeqIPKPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEEbRKNS_17__normal_iteratorIT_T0_EESE_ @300
+    _ZN9__gnu_cxxmiIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_ @301
+    _ZN9__gnu_cxxneIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEEbRKNS_17__normal_iteratorIT_T0_EESD_ @302
+    _ZNK5BSGUI4Font15StringRowParser17GetResultRowCountEv @303
+    _ZNK5BSGUI4Font15StringRowParser8FinishedEv @304
+    _ZNK5BSGUI4Font8GetFlagsEv @305
+    _ZNK5BSGUI6BMFont11GetFontNameEv @306
+    _ZNK5BSGUI8MyString10GetUnicodeEv @307
+    _ZNK9__gnu_cxx13new_allocatorIPN5BSGUI7ControlEE8max_sizeEv @308
+    _ZNK9__gnu_cxx17__normal_iteratorIPKPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEE4baseEv @309
+    _ZNK9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEE4baseEv @310
+    _ZNK9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEdeEv @311
+    _ZNK9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS3_SaIS3_EEEplERKi @312
+    _ZNKSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EE19_M_get_Tp_allocatorEv @313
+    _ZNKSt13move_iteratorIPPN5BSGUI7ControlEE4baseEv @314
+    _ZNKSt21__ctype_abstract_baseIwE5widenEc @315
+    _ZNKSt5ctypeIcE6narrowEcc @316
+    _ZNKSt6vectorIPN5BSGUI7ControlESaIS2_EE12_M_check_lenEjPKc @317
+    _ZNKSt6vectorIPN5BSGUI7ControlESaIS2_EE3endEv @318
+    _ZNKSt6vectorIPN5BSGUI7ControlESaIS2_EE4sizeEv @319
+    _ZNKSt6vectorIPN5BSGUI7ControlESaIS2_EE5beginEv @320
+    _ZNKSt6vectorIPN5BSGUI7ControlESaIS2_EE5emptyEv @321
+    _ZNKSt6vectorIPN5BSGUI7ControlESaIS2_EE8max_sizeEv @322
+    _ZNKSt8ios_base6getlocEv @323
+    _ZNSaIPN5BSGUI7ControlEEC2Ev @324
+    _ZNSaIPN5BSGUI7ControlEED2Ev @325
+    _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIPN5BSGUI7ControlEEEPT_PKS6_S9_S7_ @326
+    _ZNSt12_Destroy_auxILb1EE9__destroyIPPN5BSGUI7ControlEEEvT_S6_ @327
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EE11_M_allocateEj @328
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EE12_Vector_implC1Ev @329
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EE12_Vector_implD1Ev @330
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EE13_M_deallocateEPS2_j @331
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EE19_M_get_Tp_allocatorEv @332
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EEC2Ev @333
+    _ZNSt12_Vector_baseIPN5BSGUI7ControlESaIS2_EED2Ev @334
+    _ZNSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS4_SaIS4_EEEELb0EE3__bES9_ @335
+    _ZNSt12__miter_baseIPPN5BSGUI7ControlELb0EE3__bES3_ @336
+    _ZNSt12__miter_baseISt13move_iteratorIPPN5BSGUI7ControlEELb1EE3__bES5_ @337
+    _ZNSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS4_SaIS4_EEEELb1EE3__bES9_ @338
+    _ZNSt12__niter_baseIPPN5BSGUI7ControlELb0EE3__bES3_ @339
+    _ZNSt13move_iteratorIPPN5BSGUI7ControlEEC1ES3_ @340
+    _ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIPN5BSGUI7ControlEEEPT_PKS6_S9_S7_ @341
+    _ZNSt20__uninitialized_copyILb1EE18uninitialized_copyISt13move_iteratorIPPN5BSGUI7ControlEES6_EET0_T_S9_S8_ @342
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE13_M_insert_auxIIRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_ @343
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE15_M_erase_at_endEPS2_ @344
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE3endEv @345
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE5beginEv @346
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE5clearEv @347
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE5eraseEN9__gnu_cxx17__normal_iteratorIPS2_S4_EE @348
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EE9push_backERKS2_ @349
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EEC1Ev @350
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EED1Ev @351
+    _ZNSt6vectorIPN5BSGUI7ControlESaIS2_EEixEj @352
+    _ZSt13__copy_move_aILb1EPPN5BSGUI7ControlES3_ET1_T0_S5_S4_ @353
+    _ZSt13move_backwardIPPN5BSGUI7ControlES3_ET0_T_S5_S4_ @354
+    _ZSt14__copy_move_a2ILb1EN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS4_SaIS4_EEEES9_ET1_T0_SB_SA_ @355
+    _ZSt14__copy_move_a2ILb1EPPN5BSGUI7ControlES3_ET1_T0_S5_S4_ @356
+    _ZSt18make_move_iteratorIPPN5BSGUI7ControlEESt13move_iteratorIT_ERKS5_ @357
+    _ZSt18uninitialized_copyISt13move_iteratorIPPN5BSGUI7ControlEES4_ET0_T_S7_S6_ @358
+    _ZSt22__copy_move_backward_aILb1EPPN5BSGUI7ControlES3_ET1_T0_S5_S4_ @359
+    _ZSt22__uninitialized_copy_aISt13move_iteratorIPPN5BSGUI7ControlEES4_S3_ET0_T_S7_S6_RSaIT1_E @360
+    _ZSt22__uninitialized_move_aIPPN5BSGUI7ControlES3_SaIS2_EET0_T_S6_S5_RT1_ @361
+    _ZSt23__copy_move_backward_a2ILb1EPPN5BSGUI7ControlES3_ET1_T0_S5_S4_ @362
+    _ZSt3maxIjERKT_S2_S2_ @363
+    _ZSt4copyISt13move_iteratorIPPN5BSGUI7ControlEES4_ET0_T_S7_S6_ @364
+    _ZSt4moveIN9__gnu_cxx17__normal_iteratorIPPN5BSGUI7ControlESt6vectorIS4_SaIS4_EEEES9_ET0_T_SB_SA_ @365
+    _ZSt4moveIRPN5BSGUI7ControlEEONSt16remove_referenceIT_E4typeEOS5_ @366
+    _ZSt7forwardIPN5BSGUI7ControlEEOT_ONSt8identityIS3_E4typeE @367
+    _ZSt7forwardIRKPN5BSGUI7ControlEEOT_ONSt8identityIS5_E4typeE @368
+    _ZSt8_DestroyIPPN5BSGUI7ControlEEvT_S4_ @369
+    _ZSt8_DestroyIPPN5BSGUI7ControlES2_EvT_S4_RSaIT0_E @370
+    _ZTIN5BSGUI11FileBrowserE @371 DATA
+    _ZTIN5BSGUI11ImageOpenGLE @372 DATA
+    _ZTIN5BSGUI11ListboxItemE @373 DATA
+    _ZTIN5BSGUI11PasswordboxE @374 DATA
+    _ZTIN5BSGUI11ProgressBarE @375 DATA
+    _ZTIN5BSGUI4FontE @376 DATA
+    _ZTIN5BSGUI5ImageE @377 DATA
+    _ZTIN5BSGUI5LabelE @378 DATA
+    _ZTIN5BSGUI6BMFontE @379 DATA
+    _ZTIN5BSGUI6ButtonE @380 DATA
+    _ZTIN5BSGUI6ScreenE @381 DATA
+    _ZTIN5BSGUI6SliderE @382 DATA
+    _ZTIN5BSGUI6WindowE @383 DATA
+    _ZTIN5BSGUI7ControlE @384 DATA
+    _ZTIN5BSGUI7ListboxE @385 DATA
+    _ZTIN5BSGUI7PictureE @386 DATA
+    _ZTIN5BSGUI8CheckboxE @387 DATA
+    _ZTIN5BSGUI8InputboxE @388 DATA
+    _ZTIN5BSGUI8RendererE @389 DATA
+    _ZTIN5BSGUI9ModelViewE @390 DATA
+    _ZTIN5BSGUI9ScrollboxE @391 DATA
+    _ZTSN5BSGUI11FileBrowserE @392 DATA
+    _ZTSN5BSGUI11ImageOpenGLE @393 DATA
+    _ZTSN5BSGUI11ListboxItemE @394 DATA
+    _ZTSN5BSGUI11PasswordboxE @395 DATA
+    _ZTSN5BSGUI11ProgressBarE @396 DATA
+    _ZTSN5BSGUI4FontE @397 DATA
+    _ZTSN5BSGUI5ImageE @398 DATA
+    _ZTSN5BSGUI5LabelE @399 DATA
+    _ZTSN5BSGUI6BMFontE @400 DATA
+    _ZTSN5BSGUI6ButtonE @401 DATA
+    _ZTSN5BSGUI6ScreenE @402 DATA
+    _ZTSN5BSGUI6SliderE @403 DATA
+    _ZTSN5BSGUI6WindowE @404 DATA
+    _ZTSN5BSGUI7ControlE @405 DATA
+    _ZTSN5BSGUI7ListboxE @406 DATA
+    _ZTSN5BSGUI7PictureE @407 DATA
+    _ZTSN5BSGUI8CheckboxE @408 DATA
+    _ZTSN5BSGUI8InputboxE @409 DATA
+    _ZTSN5BSGUI8RendererE @410 DATA
+    _ZTSN5BSGUI9ModelViewE @411 DATA
+    _ZTSN5BSGUI9ScrollboxE @412 DATA
+    _ZTVN5BSGUI11FileBrowserE @413 DATA
+    _ZTVN5BSGUI11ImageOpenGLE @414 DATA
+    _ZTVN5BSGUI11ListboxItemE @415 DATA
+    _ZTVN5BSGUI11PasswordboxE @416 DATA
+    _ZTVN5BSGUI11ProgressBarE @417 DATA
+    _ZTVN5BSGUI4FontE @418 DATA
+    _ZTVN5BSGUI5ImageE @419 DATA
+    _ZTVN5BSGUI5LabelE @420 DATA
+    _ZTVN5BSGUI6BMFontE @421 DATA
+    _ZTVN5BSGUI6ButtonE @422 DATA
+    _ZTVN5BSGUI6ScreenE @423 DATA
+    _ZTVN5BSGUI6SliderE @424 DATA
+    _ZTVN5BSGUI6WindowE @425 DATA
+    _ZTVN5BSGUI7ControlE @426 DATA
+    _ZTVN5BSGUI7ListboxE @427 DATA
+    _ZTVN5BSGUI7PictureE @428 DATA
+    _ZTVN5BSGUI8CheckboxE @429 DATA
+    _ZTVN5BSGUI8InputboxE @430 DATA
+    _ZTVN5BSGUI8RendererE @431 DATA
+    _ZTVN5BSGUI9ModelViewE @432 DATA
+    _ZTVN5BSGUI9ScrollboxE @433 DATA
+    _ZnwjPv @434
+    _get_output_format @435

@@ -5,17 +5,27 @@
 #ifndef __BSGUI_LABELS_H_INCLUDED__
 #define __BSGUI_LABELS_H_INCLUDED__
 
+#include <string>
+
+#include "bsgui/controls.h"
+
+namespace BSGUI
+{
+
 struct Label : public Control
 {
-	char	*text;
-	
-	Label(Control *parent, int x, int y, char *text);
+	MyString text;
+
+	Label(Control *parent, Theme &t, int x, int y, const MyString text);
 	virtual ~Label();
-	
-	virtual void setText(char *newText);
-	
-	virtual void render();
+
+	void SetText(const MyString text);
+	void SetTheme(Theme &t);
+
+	virtual void Render();
 };
+
+}
 
 #endif
 

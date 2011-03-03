@@ -5,26 +5,37 @@
 #ifndef __BSGUI_CHECKBOXES_H_INCLUDED__
 #define __BSGUI_CHECKBOXES_H_INCLUDED__
 
-struct Checkbox : public Control
-{
-	char			*caption;
-	bool			hover;
-	bool			pushed;
-	DataManager<bool>	checked;
+#include <string>
 
-	Checkbox(Control *parent, int x1, int y1, int x2, int y2,char *caption);
+#include "buttons.h"
+#include "MyString.h"
+
+namespace BSGUI
+{
+
+struct Checkbox : public Button
+{
+
+	Checkbox(Control *parent, Theme&, int x1, int y1, int x2, int y2, const MyString caption);
 	virtual ~Checkbox();
 
-	virtual void setCaption(char *newCaption);
+	CallbackActionFunc actionModified;
 
-	virtual void render();
-	
-	virtual void setState(bool checked);
+	virtual void Render();
 
-	virtual void onMouseDown(int x, int y, int b);
-	virtual void onMouseUp(int x, int y, int b);
-	virtual void onMouseEnter();
-	virtual void onMouseExit();
+	virtual bool OnMouseDown(int x, int y, int b);
+	virtual bool OnMouseUp(int x, int y, int b);
+	virtual void OnMouseEnter();
+	virtual void OnMouseExit();
+
+	MyString caption;
+
+	bool checked;
+	bool hover;
+
 };
+
+
+}
 
 #endif

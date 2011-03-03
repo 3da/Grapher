@@ -1,84 +1,8 @@
-Bad Sector's OpenGL GUI Readme
+BSGUI Readme
 ==============================
 
-This is a small GUI library for OpenGL i wrote. It is written in C++, mostly for
-my personal usage. However, i decided to release the code in the public,
-licensed under the terms of the MIT license (read LICENSE) for others to use it
-if they want.
+GUI system based on Bad Sector's OpenGL GUI.
 
-But note: the library is hardly documented and the interface may change. I
-	consider it to be in "alpha" stage, not production stable and of course
-	it contains lots of bugs which may or may not get fixed. You have been
-	warned. If you still want to use this lib, then you're welcome to do so.
-	
+Look demo.cpp to overview it.
 
-1. Building the library
------------------------
-
-	Except if you build the library using Dev-C++ for Microsoft Windows or
-	you write manually the Makefile, then you will need a small tool i
-	wrote, called 'bmake'. You can find this tool at:
-	
-		http://www.slashstone.com/more/bmake
-		
-	The rest of this section assumes that you have downloaded and installed
-	bmake version 0.3 (or any newer that may exist at the location above).
-
-	a) Building under *nix-like systems using bmake
-	-----------------------------------------------
-	First of all be warned that i only tested that with Fedora Core 3 Linux
-	and in Ubuntu Linux AMD64 edition. The rest is untested.
-	
-	Just type:
-		bmake
-		
-	and wait (it won't take much time).
-	
-	b) Building under Win32 using bmake
-	-----------------------------------
-	I haven't tested that, but it should work.
-	
-	Just type:
-		bmake
-
-	c) Building under Win32 using the supplied Dev-C++ project file
-	---------------------------------------------------------------
-		Not supported anymore
-		
-	d) Building with GNU make under Linux
-	-------------------------------------
-		(may not work... this is only for Linux)
-	To build the library type:
-	
-		make -f Makefile.lib
-		
-	To build the demo type:
-	
-		make -f Makefile.bm
-	
-	e) Building manually
-	--------------------
-	Using a text editor, open the bsgui.prj file and look for list of .cpp
-	and for the list of .h files.
-
-	Using whatever method you prefer, add these files to your project and
-	build it.
-
-
-2. Installing BSGUI
--------------------
-	There is not much about installing it. If you made a static library,
-copy the libbsgui.a in your /usr/local/lib (under Linux) or c:\dev-cpp\lib
-(under Windows/Dev-C++) or c:\mingw\lib (under Windows/plain MinGW) or wherever
-your libraries reside and the contents of "include" in your /usr/local/include
-(under Linux) or c:\dev-cpp\include (under Windows/Dev-C++) or c:\mingw\include
-(under Windows/plain MinGW) or wherever your include files reside. Then you'll
-be ok.
-
-3. Using BSGUI
---------------
-	Look the demo/demo.cpp file. It uses almost every control (widget) that
-BSGUI has. For a quick-startup tutorial, look docs/tutorial.html (note: this
-tutorial is about BSGUI 0.1 - some things are a bit different in BSGUI 0.2... i
-will try to update it as soon as possible and write some documentation for
-BSGUI)
+Copyright (C) 2011 Alexey Adamenko

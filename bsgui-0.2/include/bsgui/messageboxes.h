@@ -5,6 +5,23 @@
 #ifndef __BSGUI_MESSAGEBOXES_H_INCLUDED__
 #define __BSGUI_MESSAGEBOXES_H_INCLUDED__
 
-void messageBox(char *msg, char *caption="Message", bool exclusive=true);
+#include "bsgui/theme.h"
+
+#include "bsgui/mystring.h"
+
+
+#undef MessageBox
+
+namespace BSGUI
+{
+
+void MessageBox(
+				Theme &t,
+				const MyString msg,
+				const MyString caption=L"Message",
+				bool exclusive=true
+				);
+
+}
 
 #endif

@@ -5,92 +5,131 @@
 #ifndef __BSGUI_CONTROLS_H_INCLUDED__
 #define __BSGUI_CONTROLS_H_INCLUDED__
 
+#include <vector>
+#include "bsgui/actions.h"
+#include "bsgui/theme.h"
+#include "MyString.h"
+
+namespace BSGUI
+{
+
 struct Control
 {
-	Control 		*parent;
-	Control			*firstChild;
-	Control			*lastChild;
-	Control			*previous;
-	Control			*next;
-	
-	Control			*exclusiveChild;
-	
-	char            	*name;
-	int			xShift;
-	int			yShift;
-	int			x1;
-	int			y1;
-	int			x2;
-	int			y2;
-	int			padLeft;
-	int			padTop;
-	int			padRight;
-	int			padBottom;
-	int			minWidth;
-	int			minHeight;
-	int			maxWidth;
-	int			maxHeight;
-	bool            	performLayout;
-	bool			mouseOverControl;
-	
-	struct Action		*clicked;
-	struct Action		*modified;
-	struct Action		*selected;
-	struct Action		*moved;
-	struct Action		*resized;
+	Control *parent;
+	std::vector<Control*> childs;
+	Control *childFocus;
 
-	struct PopupMenu        *popupMenu;
-	
-	Control(Control *parent);
+	Control *exclusiveChild;
+
+	MyString name;
+	int xShift;
+	int yShift;
+	int x1;
+	int y1;
+	int x2;
+	int y2;
+
+	int minWidth;
+	int minHeight;
+	int maxWidth;
+	int maxHeight;
+	bool performLayout;
+	bool mouseOverControl;
+
+	bool visible;
+
+	Theme theme;
+
+	CallbackActionFunc actionClicked;
+	CallbackActionFunc actionResized;
+	CallbackActionFunc actionMoved;
+
+	struct PopupMenu *popupMenu;
+
+	Control(Control *parent, Theme &theme);
 	virtual ~Control();
 
-	virtual void setName(char *newName);
-	virtual Control *findChild(char *name);
-	
-	virtual void addChild(Control *child);
-	virtual void removeChild(Control *child);
-	virtual void removeAllChildren();
-	virtual void layout(){};
-	
-	virtual Control *childAt(int x, int y);
-	
-	struct Screen *getScreen();
-		
-	virtual void makeExclusive();
-	
-	virtual void tick();
-	virtual void render();
-	virtual void focus();
-	virtual bool focused();
-	virtual void place(int x1, int y1, int x2, int y2);
-	virtual void move(int x, int y);
-	virtual void resize(int width, int height);
-	virtual void center(bool horizontal=true, bool vertical=true);
-	virtual void translate(int &x, int &y);
-	virtual void getBounds(int &x1, int &y1, int &x2, int &y2);
-	virtual void setPadding(int left, int top=-1, int right=-1,
-		int bottom=-1);
-	virtual void getClientSize(int &w, int &h);
-	
+	virtual Control *FindChild(MyString name);
+
+	virtual void AddChild(Control *child);
+	virtual void RemoveChild(Control *child);
+	virtual void RemoveAllChildren();
+	virtual void Layout() {};
+
+	virtual Control *ChildAt(int x, int y);
+
+	struct Screen *GetScreen();
+
+	virtual void MakeExclusive();
+
+	virtual void Tick();
+	virtual void Render();
+	virtual void Focus();
+	virtual bool Focused();
+	virtual void Place(int x1, int y1, int x2, int y2);
+	virtual void Move(int x, int y);
+	virtual void Resize(int width, int height);
+	virtual void Center(bool horizontal = true, bool vertical = true);
+	virtual void Translate(int &x, int &y);
+	virtual void GetBounds(int &x1, int &y1, int &x2, int &y2);
+	//virtual void GetChildrenBounds(int &x1, int &y1, int &x2, int &y2);
+	virtual void GetBoundsChildren(int &x1, int &y1, int &x2, int &y2);
+	//virtual void GetBoundsChildren(int &x1, int &y1, int &x2, int &y2);
+	virtual void SetTheme(Theme &t);
+	virtual void GetClientSize(int &w, int &h);
+
 	// drawing helpers
-	virtual void openClip();
-	virtual void closeClip();
-	virtual void drawOwnFrame();
-	virtual void drawOwnFocus();
+	virtual void OpenClip();
+	virtual void CloseClip();
+	virtual void DrawOwnFrame();
+	virtual void DrawOwnFocus();
 	// mouse events
-	virtual void onMouseEnter();
-	virtual void onMouseMoved(int x, int y);
-	virtual void onMouseExit();
-	virtual void onMouseDown(int x, int y, int b);
-	virtual void onMouseUp(int x, int y, int b);
+	virtual void OnMouseEnter();
+	virtual bool OnMouseMoved(int x, int y);
+	virtual void OnMouseExit();
+	virtual bool OnMouseDown(int x, int y, int b);
+	virtual bool OnMouseUp(int x, int y, int b);
 	// keyboard events
-	virtual void onKeyDown(int key, unsigned char ascii);
-	virtual void onKeyUp(int key, unsigned char ascii);
+	virtual bool OnKeyDown(int key, unsigned wchar_t code);
+	virtual bool OnKeyUp(int key, unsigned wchar_t code);
 	// focus events
-	virtual void onFocusEnter(){};
-	virtual void onFocusExit(){};
+	virtual void OnFocusEnter() {};
+	virtual void OnFocusExit() {};
+
+	void SetMouseTracking();
+	static void ClearMouseTracking();
+	void Invalidate();
+	void SetKeyboardFocus();
+	bool HasKeyboardFocus();
+
+	static Control *lastChildUnderMouse;
+	static Control *trackControl;
+	static Control *keyboardFocusControl;
+
+/*	inline void FreeAction(Action *a)
+	{
+		if (a && a->autoDelete)
+			delete a;
+	}
+*/
+
+	inline void RunAction(CallbackActionFunc &a)
+	{
+		if (a)
+			(*a)(this);
+	}
+
+	inline static void RunActionOf(Control *c, CallbackActionFunc &a)
+	{
+		if (a)
+			(*a)(c);
+	}
+
+
 };
 
 typedef Control Widget;
+
+}
 
 #endif
