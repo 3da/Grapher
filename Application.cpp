@@ -1,10 +1,12 @@
 #include "Application.h"
 
 bool Application::running = true;
-Window *Application::win;
-Screen *Application::screen1;
-Label *Application::xLabel;
-Label *Application::yLabel;
+BSGUI::Window *Application::win = 0;
+BSGUI::Screen *Application::screen1;
+BSGUI::Label *Application::xLabel;
+BSGUI::Label *Application::yLabel;
+BSGUI::Theme Application::theme;
+BSGUI::Font *Application::font;
 
 float Application::zoom=1;
 float Application::xOffset=0;
@@ -21,22 +23,23 @@ std::vector<std::string> Application::functions;
 
 int Application::InitVideo()
 {
-  if (SDL_Init(SDL_INIT_VIDEO) != 0)
-  {
-    fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
-    return false;
-  }
-  atexit(SDL_Quit); // Clean it up nicely :)
+	if (SDL_Init(SDL_INIT_VIDEO) != 0)
+	{
+		fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
+		return false;
+	}
+	IMG_Init(IMG_INIT_PNG|IMG_INIT_JPG);
+	atexit(SDL_Quit);
 
-  //To use OpenGL, you need to get some information first,
-  const SDL_VideoInfo *info = SDL_GetVideoInfo();
-  if(!info)
-  {
-    /* This should never happen, if it does PANIC! */
-    fprintf(stderr, "Video query failed: %s\n", SDL_GetError());
-    return false;
-  }
-  //int bpp = info->vfmt->BitsPerPixel;
+	//To use OpenGL, you need to get some information first,
+	const SDL_VideoInfo *info = SDL_GetVideoInfo();
+	if(!info)
+	{
+		/* This should never happen, if it does PANIC! */
+		fprintf(stderr, "Video query failed: %s\n", SDL_GetError());
+		return false;
+	}
+	//int bpp = info->vfmt->BitsPerPixel;
 
 	SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
@@ -44,14 +47,14 @@ int Application::InitVideo()
 	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
-	SDL_ShowCursor(false);
-    SDL_WM_SetCaption(APPLICATION_NAME " " VERSION, "Grapher");
+	// SDL_ShowCursor(false);
+	SDL_WM_SetCaption(APPLICATION_NAME " " VERSION, "Grapher");
 
-  if (SDL_SetVideoMode(width, height, 0, SDL_OPENGL) == 0)
-  {
-    fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
-    return false;
-  }
+	if (SDL_SetVideoMode(width, height, 0, SDL_OPENGL) == 0)
+	{
+		fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
+		return false;
+	}
 
 	return SetupOpengl(width, height);
 }
@@ -66,19 +69,17 @@ int Application::SetupOpengl(int width, int height)
 	glClearColor(0, 0, 0, 0);
 	glViewport(0, 0, width, height);
 
-	glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho(-width/2, width/2, -height/2, height/2, -1, 1);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-
 	return true;
 }
 
 void Application::Display()
 {
 
-	renderOffscreenBSGUIControls();
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glOrtho(-width/2, width/2, -height/2, height/2, -1, 1);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
 
 	glClearColor(0, 0, 0, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -140,17 +141,18 @@ void Application::Display()
 		glEnd();
 	}
 
-
-
-	renderBSGUI();
-
 	glFinish();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+	BSGUI::Render();
+
+
 
 	SDL_GL_SwapBuffers();
 
 }
 
-void Application::CloseWindowAction(Control *sender)
+void Application::CloseWindowAction(BSGUI::Control *sender)
 {
 	if (win)
 		delete win;
@@ -159,12 +161,12 @@ void Application::CloseWindowAction(Control *sender)
 	yLabel=0;
 }
 
-void Application::ZoomInAction(Control *sender)
+void Application::ZoomInAction(BSGUI::Control *sender)
 {
 	zoom*=1.5;
 }
 
-void Application::ZoomOutAction(Control *sender)
+void Application::ZoomOutAction(BSGUI::Control *sender)
 {
 	zoom/=1.5;
 }
@@ -173,26 +175,30 @@ void Application::ShowInfoWindow()
 {
 	if (!win)
 	{
-		win = new Window("Coordinates");
-		win->center();
+		win = new BSGUI::Window(screen1, theme, "Coordinates");
+		win->Center();
+		screen1->Activate();
 
-		xLabel = new Label(win, 5, 0, "X = ");
-		yLabel = new Label(win, 5, 15, "Y = ");
+		xLabel = new BSGUI::Label(win, theme, 5, 0, "X = ");
+		yLabel = new BSGUI::Label(win, theme, 5, 15, "Y = ");
 
-		(new Button(win, 10, 85, 180, 110, "Close"))->clicked = new CallbackAction(CloseWindowAction);
-		(new Button(win, 10, 45, 80, 70, "ZoomIn"))->clicked = new CallbackAction(ZoomInAction);
-		(new Button(win, 100, 45, 180, 70, "ZoomOut"))->clicked = new CallbackAction(ZoomOutAction);
+		(new BSGUI::Button(win, theme, 10, 85, 180, 110, "Close"))->actionClicked = CloseWindowAction;
+		(new BSGUI::Button(win, theme, 10, 45, 80, 70, "ZoomIn"))->actionClicked = ZoomInAction;
+		(new BSGUI::Button(win, theme, 100, 45, 180, 70, "ZoomOut"))->actionClicked = ZoomOutAction;
 	}
 }
 
 void Application::CreateUI()
 {
-	BSGUIDraw::loadFontData("fontdata.bmp", "fontsize.dat");
-	BSGUIDraw::loadCursorImage("cursor.bmp", "cursorAlpha.bmp");
+	font = new BSGUI::BMFont("font.fnt");
+	font->Init();
+	theme.font = font;
+	theme.fontSize = 0.6;
+	theme.height = 25;
 
 
-
-	screen1 = screen;
+	screen1 = new BSGUI::Screen(theme);
+	screen1->Activate();
 }
 
 int Application::Register(lua_State *ls)
@@ -204,7 +210,7 @@ int Application::Register(lua_State *ls)
 		// Вернем 0 в Lua скрипт
 		lua_pushnumber(ls, 0);
 		// Количество возвращаемых значений
-    	return 1;
+		return 1;
 	}
 
 	if(!lua_isstring(ls, 1))
@@ -228,15 +234,15 @@ void Application::Input()
 	SDL_Event e;
 	while(SDL_PollEvent(&e))
 	{
-		if (!handleSDLEvent(&e))
+		if (!BSGUI::HandleSDLEvent(&e))
 			switch(e.type)
 			{
 			case SDL_KEYDOWN:
 				switch (e.key.keysym.sym)
 				{
-					case SDLK_ESCAPE:
-						exit(0);
-						break;
+				case SDLK_ESCAPE:
+					exit(0);
+					break;
 					/*case SDLK_LEFT:
 						xOffset+=20/zoom;
 						break;
@@ -255,9 +261,9 @@ void Application::Input()
 					case SDLK_d:
 						zoom*=0.9;
 						break;*/
-					case SDLK_i:
-						ShowInfoWindow();
-						break;
+				case SDLK_i:
+					ShowInfoWindow();
+					break;
 				}
 				break;
 			case SDL_QUIT:
@@ -266,13 +272,13 @@ void Application::Input()
 			case SDL_MOUSEMOTION:
 				if (win)
 				{
-					char buf[256];
+					wchar_t buf[128];
 					float x = (e.motion.x-width/2-xOffset)/zoom;
 					float y = -(e.motion.y-height/2+yOffset)/zoom;
-					sprintf(buf, "X = %.2f", x);
-					xLabel->setText(buf);
-					sprintf(buf, "Y = %.2f", y);
-					yLabel->setText(buf);
+					swprintf(buf, L"X = %.2f", x);
+					xLabel->SetText(buf);
+					swprintf(buf, L"Y = %.2f", y);
+					yLabel->SetText(buf);
 				}
 				if (dragScreen)
 				{
@@ -324,27 +330,25 @@ int Application::Run()
 	if (InitVideo() == false)
 		return 1;
 
-	initBSGUI();
 
 	CreateUI();
 
 	SDL_EnableKeyRepeat(500,100);
 	SDL_EnableUNICODE(true);
 
-    while(true)
-    {
+	while(true)
+	{
 
-    	tickBSGUI();
-    	Input();
+		BSGUI::Tick();
+		Input();
 
 		glLoadIdentity();
-    	Display();
+		Display();
 
-    	SDL_GL_SwapBuffers();
-    	SDL_Delay(10);
-    }
+		SDL_GL_SwapBuffers();
+		SDL_Delay(10);
+	}
 
-	shutdownBSGUI();
 	SDL_Quit();
 
 	lua_close(L);

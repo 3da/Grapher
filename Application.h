@@ -31,9 +31,9 @@ protected:
 	static int InitVideo();
 	static int SetupOpengl(int width, int height);
 	static void Display();
-	static void ZoomInAction(Control *sender);
-	static void ZoomOutAction(Control *sender);
-	static void CloseWindowAction(Control *sender);
+	static void ZoomInAction(BSGUI::Control *sender);
+	static void ZoomOutAction(BSGUI::Control *sender);
+	static void CloseWindowAction(BSGUI::Control *sender);
 	static void ShowInfoWindow();
 	static void CreateUI();
 	static int Register(lua_State *ls);
@@ -42,10 +42,12 @@ protected:
 
 
 	static bool running;
-	static Window *win;
-	static Screen *screen1;
-	static Label *xLabel;
-	static Label *yLabel;
+	static BSGUI::Window *win;
+	static BSGUI::Screen *screen1;
+	static BSGUI::Label *xLabel;
+	static BSGUI::Label *yLabel;
+	static BSGUI::Theme theme;
+	static BSGUI::Font *font;
 
 	static float zoom;
 	static float xOffset;

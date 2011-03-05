@@ -32,7 +32,9 @@
 			<Add option="-Wall" />
 			<Add directory="lua-5.1.4\src" />
 			<Add directory="SDL-1.2.14\include" />
-			<Add directory="bsgui-0.2\include" />
+			<Add directory="bsgui\include" />
+			<Add directory="SDL_image-1.2.10\include" />
+			<Add directory="SDL-1.2.14\include\SDL" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
@@ -40,9 +42,11 @@
 			<Add library="SDL" />
 			<Add library="opengl32" />
 			<Add library="glu32" />
-			<Add library="bsgui-0.2\bin\Release\libbsgui-0.2.dll.a" />
+			<Add library="bsgui\bin\libbsgui_d.dll.a" />
+			<Add library="SDL_image" />
 			<Add directory="SDL-1.2.14\lib" />
-			<Add directory="bsgui-0.2\lib" />
+			<Add directory="bsgui\lib" />
+			<Add directory="SDL_image-1.2.10\lib" />
 		</Linker>
 		<Unit filename="Application.cpp" />
 		<Unit filename="Application.h" />
